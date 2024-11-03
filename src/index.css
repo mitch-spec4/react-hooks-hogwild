@@ -1,152 +1,109 @@
+/* Global Styles */
 body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f2f5; /* Light gray background */
   margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+  padding: 20px;
+  color: #333; /* Dark text color */
 }
 
-.App {
-  margin: 0% 5% 0% 5%;
+h1 {
+  text-align: center;
+  color: #2c3e50; /* Dark blue-gray */
+  margin-bottom: 20px;
+  font-size: 2.5rem; /* Larger heading */
+}
+
+/* Container for grid layout */
+.ui.grid.container {
+  margin-top: 20px;
+}
+
+/* Button Styles */
+.ui.button {
+  background-color: #4CAF50; /* Green background */
+  color: white; /* White text */
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.ui.button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: translateY(-2px); /* Lift effect */
+}
+
+.error-message {
+  color: #e74c3c; /* Red color for error messages */
   text-align: center;
 }
 
-.TwirlyPig {
-  transition: all 3s ease-in-out;
-  display: inline;
+/* FilterSort Styles */
+.filter-sort {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
 }
 
-.TwirlyPig:hover {
-  transform: scale(1.5);
+.ui.toggle.checkbox {
+  margin-right: 20px;
 }
 
-.navWrapper {
-  margin-bottom: 2%;
+select {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-left: 10px;
+  transition: border-color 0.3s; /* Transition for focus state */
 }
 
-.filterWrapper {
-  margin: 2% 0% 2% 0%;
+select:focus {
+  border-color: #4CAF50; /* Green border on focus */
+  outline: none; /* Remove default outline */
 }
 
-.headerText {
-  color: #F5A9BC;
-  font-size: 3em;
-  margin: 0% 2% 0% 2%;
+/* HogTile Styles */
+.card {
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+  cursor: pointer;
+  margin: 10px; /* Space between cards */
+  background: white; /* White background for cards */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-.largeHeader {
-  font-size: 3.5em;
-  font-weight: bold;
-  color: #3B0B0B;
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
 }
 
-.smallHeader {
-  font-size: 1.75em;
-  font-weight: bold;
-  color: #3B0B0B;
+.card img {
+  width: 100%; /* Responsive image */
+  height: auto;
+  border-top-left-radius: 10px; /* Rounded corners for image */
+  border-top-right-radius: 10px; /* Rounded corners for image */
 }
 
-.normalText {
-  font-family: Georgia, serif;
-  font-size: .75em;
+.card .button {
+  background-color: #e74c3c; /* Red background for the hide button */
+  color: white; /* White text color */
+  border: none;
+  padding: 10px 15px; /* Padding around the button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s; /* Transitions */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
 }
 
-.hoggyText {
-  font-size: 1.5em;
+.card .button:hover {
+  background-color: #c0392b; 
+  transform: translateY(-2px); 
 }
 
-.achievementText {
-  color: purple;
-}
-
-ul {
-  list-style-type: none;
-  list-style: none;
-}
-
-.normalText ul {
-  font-family: Georgia, serif;
-  font-size: .75em;
-  text-align: left;
-}
-
-.subtleText {
-  color: #D1D1D1;
-  font-size: .75em;
-}
-
-
-.indexWrapper {
-  margin: auto;
-}
-
-
-.pigTile {
-  display: inline;
-  background-repeat: no-repeat;
-  background-position: center 90%;
-  float: left;
-  margin: 2%;
-  padding: 1%;
-  outline: #3B0B0B dotted thick;
-  transition: 0.75s;
-  opacity: 1;
-}
-
-.minBackgroundSneak {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  background-size: cover;
-  z-index: -3;
-}
-
-.maxBackgroundSneak {
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  background-size: cover;
-  z-index: -3;
-  opacity: 0.75;
-}
-
-.pigTile h3 {
-  color: #FBB;
-}
-
-.minPigTile {
-  width: 250px;
-  height: 250px;
-  background-size: cover;
-}
-
-.maxPigTile {
-  background-size: cover;
-  width: 500px;
-  height: 500px;
-}
-
-.pigTile:hover {
-  transform: scale(1.05);
-}
-
-
-.App-logo {
-  animation: App-logo-spin infinite 5s linear;
-  height: 80px;
-  transition: all .2s ease-in-out;
-}
-
-.footer {
-  padding: 1%;
-  clear: both;
-}
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+.card .button:focus {
+  outline: none; 
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.5); 
 }
