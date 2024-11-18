@@ -98,6 +98,8 @@ const hogs = [
     image:
       "https://raw.githubusercontent.com/learn-co-curriculum/react-hooks-hogwild/master/public/images/leggo_my_eggo.jpg",
   },
+  
+  
 ];
 
 export default hogs;
